@@ -1,21 +1,28 @@
+import java.util.Scanner;
 public class pal {
-    public static void main(String[]args)
+    public static void main(String[] args)
     {
-        String str="MOM";
-        
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enetr Your String");
+
+        String str=sc.next();
+        String org_str=str;
+
         String rev="";
         int len=str.length();
+
+
         for(int i=len-1;i>=0;i--)
         {
-            str=str+rev.charAt(i);
+            rev=rev+str.charAt(i);
         }
-        if(str.equals(rev))
+        if(org_str.equals(rev))
         {
-            System.out.println(str+"Given String is palindrome");
+            System.out.println("The Given String is Palindrome");
         }
-        else
-        {
-            System.out.println(str+"Given String is not palindrome");
+        else{
+            System.out.println("The Given String is Not Palindrome");
         }
     }
+    
 }
